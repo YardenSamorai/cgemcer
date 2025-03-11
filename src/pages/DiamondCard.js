@@ -7,14 +7,14 @@ const DiamondCard = ({ details }) => {
     <div className="max-w-3xl mx-auto p-6  shadow-lg rounded-lg border border-gray-200 bg-white">
       {/* Diamond Details */}
       <h2 className="text-xl font-semibold text-gray-700 text-center mb-4">Diamond Details</h2>
-      <div className="grid grid-cols-1 ml-28 sm:grid-cols-2 gap-x-44 gap-y-4 text-gray-700 text-md">
+      <div className="grid grid-cols-1 ml-24 sm:grid-cols-2 text-xl sm:text-md gap-x-10 gap-y-4 text-gray-700 text-md overflow-x-auto">
         <p><span className="font-semibold">Stone ID:</span> <span className="text-green-600">{details.stone_id}</span></p>
         <p><span className="font-semibold">Shape:</span> <span className="text-green-600">{details.shape}</span></p>
         <p><span className="font-semibold">Carat:</span> <span className="text-green-600">{details.carat}</span></p>
         <p><span className="font-semibold">Clarity:</span> <span className="text-green-600">{details.clarity}</span></p>
         <p><span className="font-semibold">Lab:</span> <span className="text-green-600">{details.lab}</span></p>
         <p><span className="font-semibold">Origin:</span> <span className="text-green-600">{details.origin}</span></p>
-        <p><span className="font-semibold">Measurements:</span> <span className="text-green-600">{details.Measurements}</span></p>
+        <p><span className="font-semibold">Measurements:</span>  <span className="text-green-600 whitespace-nowrap">{details.Measurements}</span></p>
         <p><span className="font-semibold">Ratio:</span> <span className="text-green-600">{details.ratio}</span></p>
         <p><span className="font-semibold">Certificate #:</span> <a href="#" className="text-green-600 underline">{details.certificate_number}</a></p>
         <p><span className="font-semibold">Price C/T:</span> <span className="font-bold text-green-700">{details.price}</span></p>
