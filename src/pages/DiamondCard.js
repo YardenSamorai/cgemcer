@@ -4,10 +4,10 @@ import Certef from "../imges/Certef.png";
 
 const DiamondCard = ({ details }) => {
   return (
-    <div className="max-w-3xl mx-auto p-6  shadow-lg rounded-lg border border-gray-200 bg-white">
+    <div className="max-w-3xl mx-auto p-6  shadow-lg rounded-lg border bg-gradient-to-t bg-green- border-gray-200 bg-white">
       {/* Diamond Details */}
       <h2 className="text-xl font-semibold text-gray-700 text-center mb-4">Diamond Details</h2>
-      <div className="grid grid-cols-1 ml-24 sm:grid-cols-2 text-xl sm:text-md gap-x-10 gap-y-4 text-gray-700 text-md overflow-x-auto">
+      <div className="grid grid-cols-1 ml-24 sm:grid-cols-2  sm:text-lg md:text-base gap-x-10 gap-y-4 text-gray-700 overflow-x-auto sm:ml-10 md:ml-4">
         <p><span className="font-semibold">Stone ID:</span> <span className="text-green-600">{details.stone_id}</span></p>
         <p><span className="font-semibold">Shape:</span> <span className="text-green-600">{details.shape}</span></p>
         <p><span className="font-semibold">Carat:</span> <span className="text-green-600">{details.carat}</span></p>
