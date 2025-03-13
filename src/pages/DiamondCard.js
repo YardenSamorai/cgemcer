@@ -1,6 +1,7 @@
 import React from "react";
 import TC167C from "../imges/TC167C.jpg";
 import Certef from "../imges/Certef.png";
+import { SignedIn, SignedOut } from "@clerk/clerk-react";
 
 const DiamondCard = ({ details }) => {
   return (
@@ -17,11 +18,21 @@ const DiamondCard = ({ details }) => {
         <p><span className="font-semibold">Measurements:</span>  <span className="text-green-600 whitespace-nowrap">{details.Measurements}</span></p>
         <p><span className="font-semibold">Ratio:</span> <span className="text-green-600">{details.ratio}</span></p>
         <p><span className="font-semibold">Certificate #:</span> <a href="#" className="text-green-600 underline">{details.certificate_number}</a></p>
-        <p><span className="font-semibold">Price C/T:</span> <span className="font-bold text-green-700">{details.price}</span></p>
+        {
+              <SignedIn>
+                        <p><span className="font-semibold">Price C/T:</span> <span className="font-bold text-green-700">{details.price}</span></p>
+                        <p className="text-center font-semibold text-xl text-green-700 mt-4">Total Price: {details.total_price}</p>
+              </SignedIn>
+        }
       </div>
       
-      {/* Total Price */}
-      <p className="text-center font-semibold text-xl text-green-700 mt-4">Total Price: {details.total_price}</p>
+      {/* Total Price
+      <p className="text-center font-semibold text-xl text-green-700 mt-4">Total Price: {details.total_price}</p> */}
+            {/* 🚨 Signed-Out Users See a Message Instead */}
+      
+      <SignedOut>
+        <p className="text-base text-center font-bold text-red-500"><b>Sign in to view pricing details.</b></p>
+      </SignedOut>
       
       {/* Image & Certificate */}
       <div className="grid grid-cols-1 w-112/12 md:grid-cols-2 gap-4 mt-8 text-center">
